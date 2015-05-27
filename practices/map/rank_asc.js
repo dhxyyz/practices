@@ -1,6 +1,16 @@
 'use strict';
 var rank_asc = function(collection){
-  return [6,5,4,3,2];
+  for (var i = 0; i < collection.length; i++) {
+    var array;
+    for (var y = i+1; y < collection.length; y++) {
+      if (collection[i]<collection[y]) {
+        array=collection[i];
+        collection[i]=collection[y];
+        collection[y]=array;
+      }
+    }
+  }
+  return collection;
 };
 
 module.exports = rank_asc;
