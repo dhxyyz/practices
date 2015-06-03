@@ -1,28 +1,13 @@
 'use strict';
-
+var _= require('../array/lodash.js');
 function get_union(collection_a, collection_b) {
 
-//  var _= require('../lodash');
-//  return _.union(collection_a, collection_b);
-//}
-
-  for (var i = 0; i < collection_b.length; i++) {
-    collection_a.push(collection_b[i]);
-  }
-
-  var decide = false;
-  var collection = [];
-  for ( i = 0; i < collection_a.length; i++) {
-    for (var j = 0; j < collection.length; j++) {
-      if (collection[j]===collection_a[i]) {
-        decide = true;
-      }
+  var collection = collection_a;
+  _.each(collection_b,function(item,i){
+    if (!_.exist(collection_a,item)) {
+      collection[collection.length] = item;
     }
-    if (!decide) {
-      collection.push(collection_a[i]);
-    }
-    decide = false;
-  }
+  });
 
   return collection;
 

@@ -1,17 +1,14 @@
 'use strict';
-
+var _= require('../array/lodash.js');
 function choose_common_elements(collection_a, collection_b) {
-//  var _ = require ('../lodash');
-//  return _.intersection(collection_a, collection_b);
-  var collection = [];
-  for (var i = 0; i < collection_a.length; i++) {
-    for (var j = 0; j < collection_b.length; j++) {
-      if (collection_a[i]===collection_b[j]) {
-        collection.push(collection_a[i]);
-      }
+  var array = [];
+  _.each(collection_a,function(item,i){
+    if (_.exist(collection_b,item)) {
+      array.push(item);
     }
-  }
-  return collection;
+  });
+
+  return array;
 }
 
 module.exports = choose_common_elements;

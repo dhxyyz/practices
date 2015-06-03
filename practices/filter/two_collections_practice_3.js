@@ -1,6 +1,10 @@
 'use strict';
 
 function choose_divisible_integer(collection_a, collection_b) {
+//  var collection = [];
+//  _filter_in(collection_a,function(){  
+//  });
+
   var collection = [];
   for (var i = 0; i < collection_a.length; i++) {
     var test = false;
