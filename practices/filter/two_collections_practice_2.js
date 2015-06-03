@@ -7,7 +7,7 @@ function choose_no_common_elements(collection_a, collection_b) {
       array.push(item);
     }
   });
-
+  
   return array;
 }
 
