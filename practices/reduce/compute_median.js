@@ -1,6 +1,9 @@
 'use strict';
-
+var _ = require('../array/lodash');
 function compute_median(collection) {
+  var array = collection;
+  return _.median(_.rank(array));
+  /*
   var number;
   for (var i = 0; i < collection.length; i++) {
     for (var j = i+1; j < collection.length; j++) {
@@ -22,6 +25,7 @@ function compute_median(collection) {
     median=collection[k];
   }
   return median;
+  */
 }
 
 module.exports = compute_median;

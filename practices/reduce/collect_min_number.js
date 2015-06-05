@@ -1,6 +1,7 @@
 'use strict';
-
+var _ = require('../array/lodash');
 function collect_min_number(collection) {
+  /*
   var number;
   number = collection[1];
   for (var i = 0; i < collection.length; i++) {
@@ -11,6 +12,9 @@ function collect_min_number(collection) {
     }
   }
   return number;
+  */
+  return _.min(collection);
+
 }
 
 module.exports = collect_min_number;

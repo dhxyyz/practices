@@ -1,12 +1,14 @@
 'use strict';
-
+var _ = require('../array/lodash');
 function compute_chain_median(collection) {
   var array = [];
   array = collection.split('->');
   for (var i = 0; i < array.length; i++) {
     array[i] = parseInt(array[i]);
   }
-
+   _.rank(array);
+   return _.median(array);
+  /*
   var number;
   for (i = 0; i < array.length; i++) {
     for (var j = i+1; j < array.length; j++) {
@@ -28,6 +30,11 @@ function compute_chain_median(collection) {
     median=array[k];
   }
   return median;
+  */
 }
 
 module.exports = compute_chain_median;
+
+function median(){
+
+}

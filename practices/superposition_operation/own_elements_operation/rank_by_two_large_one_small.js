@@ -1,5 +1,9 @@
 'use strict';
+var _ = require('../../array/lodash');
 function rank_by_two_large_one_small(collection){
+  _.ranl(collection);
+  var array = [];
+/*
   var array = [];
   var number;
   for (var i = 0; i < collection.length; i++) {
@@ -11,9 +15,9 @@ function rank_by_two_large_one_small(collection){
       }
     }
   }
-
+*/
   var box = 0;
-  for ( i = 0; i < collection.length; i++) {
+  for (var i = 0; i < collection.length; i++) {
     array.push(collection[i]);
     if (i%3===2) {
       box = array[i-2];

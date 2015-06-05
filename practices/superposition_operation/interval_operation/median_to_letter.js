@@ -1,7 +1,11 @@
 'use strict';
-
+var _ = require('../../array/lodash');
 function median_to_letter(collection) {
 
+  var array =_.rank(collection);
+  var median = Math.ceil(_.median(array));
+
+/*
   var number;
   for (var i = 0; i < collection.length; i++) {
     for (var j = i+1; j < collection.length; j++) {
@@ -25,8 +29,10 @@ function median_to_letter(collection) {
     k = (collection.length-1)/2;
     median=collection[k];
   }
+  */
 
-  var quotient,remainder;
+  var quotient;
+  var remainder;
   quotient = parseInt(median/26);
   remainder = median%26;
   if (remainder===0) {

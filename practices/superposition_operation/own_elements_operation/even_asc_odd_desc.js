@@ -1,5 +1,9 @@
 'use strict';
+var _ = require('../../array/lodash');
 var even_asc_odd_desc = function(collection){
+  var array = [];
+  _.rank(collection,1);
+  /*
   var array = [];
   var number;
   for (var i = 0; i < collection.length; i++) {
@@ -11,7 +15,8 @@ var even_asc_odd_desc = function(collection){
       }
     }
   }
-  for ( i = 0; i < collection.length; i++) {
+  */
+  for (var i = 0; i < collection.length; i++) {
     if (collection[i]%2===0) {
       array.push(collection[i]);
     }
